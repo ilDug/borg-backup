@@ -1,3 +1,6 @@
+#! /bin/bash
+SCRIPT_PATH=$(dirname "$(realpath -s "$0")")
+
 apt update
 
 apt install -y \
@@ -33,4 +36,4 @@ AuthMethod=LOGIN
 AuthUser=$EMAIL
 AuthPass=$EMAIL_PASSWORD" > /etc/ssmtp/ssmtp.conf
 
-echo $EMAIL > ./configs/email
+echo $EMAIL > "$SCRIPT_PATH/configs/email"
