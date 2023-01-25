@@ -1,2 +1,4 @@
 configs/credentials
 configs/ssmtp.conf
+backup/source/*
+backup/destination/*

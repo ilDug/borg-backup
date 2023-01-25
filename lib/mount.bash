@@ -1,0 +1,2 @@
+mount $MOUNT_SRC_OPTS  "$MOUNT_SRC" "$SRC"
+mount $MOUNT_DST_OPTS  "$MOUNT_DST" "$DST"

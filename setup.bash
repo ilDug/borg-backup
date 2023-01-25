@@ -12,7 +12,10 @@ read -p "CIFS password: " CIFS_PW
 
 echo "\
 username=$CIFS_USER
-password=$CIFS_PW" > ./configs/credentials
+password=$CIFS_PW" > /root/.borg-backup-cifs-credentials
+chmod 700 /root/.borg-backup-cifs-credentials
+echo "credenziali salvate nel file '/root/.borg-backup-cifs-credentials'"
+
 
 read -p "email: " EMAIL 
 read -p "domain: " EMAIL_DOMAIN 
@@ -29,3 +32,5 @@ UseSTARTTLS=YES
 AuthMethod=LOGIN
 AuthUser=$EMAIL
 AuthPass=$EMAIL_PASSWORD" > /etc/ssmtp/ssmtp.conf
+
+echo $EMAIL > ./configs/email
